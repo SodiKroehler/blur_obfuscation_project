@@ -205,3 +205,30 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# weights & checkpoints
+**/Model/*.pt
+**/Model/*.pth
+**/weights/*.pt
+**/weights/*.pth
+
+# wandb
+wandb/
+
+# logs
+**/logs/*.log
+
+# jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# python
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# data — MNIST downloaded by torchvision
+Epic_1/EX_01/Raw/MNIST/
+Epic_1/EX_01/EX_01/Raw/MNIST
+# env
+.env
+

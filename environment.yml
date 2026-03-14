@@ -1,0 +1,13 @@
+name: mnist-blur
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - torchvision
+  - pytorch
+  - pillow
+  - jupyter
+  - matplotlib
+  - numpy
+  - ipykernel
+prefix: /ihome/xli/sek188/.conda/envs/mnist-blur

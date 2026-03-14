@@ -1,0 +1,12 @@
+exp_id: EX_01
+epic: 1
+description: "box blur baseline soft mask"
+date: 2026-03-14
+owner: sodi
+# override any defaults.yaml values below this line
+seed: 42
+img_size: 28
+raw_dir: Raw
+grad_dir: Raw/gradients
+csv_path: Raw/pairings.csv
+num_backgrounds: 10
