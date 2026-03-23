@@ -11,6 +11,7 @@ grad_dir: Raw/gradients
 csv_path: Raw/pairings.csv
 num_backgrounds: 10
 batch_size: 256
+combination_type: "alpha"
 
 variants:
   a:
