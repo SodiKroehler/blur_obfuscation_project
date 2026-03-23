@@ -63,8 +63,14 @@ def setup_logging(config: dict, log_to: str = "both") -> logging.Logger:
             #     entity=config.get("wandb_entity", None),
             # )
             
+            # run = wandb.init(
+            #     # entity="sek188",
+            #     project="cs2770_teamMav",
+            #     config=config,
+            # )
+            
             run = wandb.init(
-                entity="sek188",
+                entity="teamMaverick",
                 project="cs2770_teamMav",
                 config=config,
             )

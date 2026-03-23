@@ -10,3 +10,15 @@ raw_dir: Raw
 grad_dir: Raw/gradients
 csv_path: Raw/pairings.csv
 num_backgrounds: 10
+batch_size: 256
+
+variants:
+  a:
+    description: "random mask baseline"
+    alpha: -0.5
+    beta: 0.5
+    dropout_rate: 0.5
+  b:
+    description: "learned CNN mask"
+    alpha: -0.5
+    beta: 0.5
