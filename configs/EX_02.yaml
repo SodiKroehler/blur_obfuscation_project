@@ -1,0 +1,19 @@
+exp_id: EX_02
+epic: 1
+description: "box blur 4 channel cnn"
+date: 2026-03-30
+owner: sodi
+# override any defaults.yaml values below this line
+seed: 42
+img_size: 28
+raw_dir: Raw
+grad_dir: ../EX_01/Raw/gradients
+csv_path: ../EX_01/Raw/pairings.csv
+batch_size: 256
+variants:
+  a:
+    description: "a 4 channel cnn classier"
+    alpha: -0.55
+    beta: 0.45
+    dropout_rate: 0.5
+    sparse_lambda: 0.001
