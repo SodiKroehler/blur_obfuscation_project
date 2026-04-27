@@ -53,10 +53,7 @@ def setup_logging(config: dict, log_to: str = "both") -> logging.Logger:
     fh.setFormatter(fmt)
     logger.addHandler(fh)
 
-    
-
     if log_to in ("wandb", "both"):
-        logger.info("setting up wandb")
         try:
             import wandb
             # wandb.init(
@@ -167,7 +164,7 @@ def run_experiment(
                          for b in batch]
 
             optimizer.zero_grad()
-            loss = loss_fn(batch, model, epoch=epoch, total_epochs=epochs, mode="train", **loss_kwargs)
+            loss = loss_fn(batch, model, mode="train", **loss_kwargs)
             loss.backward()
             optimizer.step()
 
@@ -184,7 +181,7 @@ def run_experiment(
                 if isinstance(batch, (list, tuple)):
                     batch = [b.to(device) if isinstance(b, torch.Tensor) else b
                              for b in batch]
-                out = loss_fn(batch, model, epoch=epoch, total_epochs=epochs, mode="val", **loss_kwargs)
+                out = loss_fn(batch, model, mode="val", **loss_kwargs)
                 val_outputs.append(out)
 
         # val metric assembly — loss_fn can return scalar, tensor, or dict
