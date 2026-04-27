@@ -1,0 +1,42 @@
+exp_id: EX_03_02
+epic: 3
+description: "fonts instead of emnist"
+date: 2026-04-24
+owner: sodi
+seed: 42
+img_size: 28
+raw_dir: Raw
+grad_dir: ../../Epic_1/EX_01_01/Raw/gradients
+csv_path: ../../Epic_1/EX_01_01/Raw/pairings.csv
+batch_size: 512
+epochs: 20
+# override any defaults.yaml values below this line
+glyph_bkgrnd: "blank"
+variants:
+  a:
+    description: ""
+    alpha: 0.55
+    beta: 0.45
+    gamma: 0.05
+    dropout_rate: 0.5
+    sparse_lambda: 0.2
+    blur_kernel_size: 3
+    epochs: 10
+    
+  b:
+    description: ""
+    alpha: 0.55
+    beta: 0.45
+    gamma: 0.25
+    dropout_rate: 0.5
+    sparse_lambda: 0.2
+    blur_kernel_size: 3
+    epochs: 10
+  c:
+    description: ""
+    alpha: -0.55
+    beta: -0.45
+    dropout_rate: 0.5
+    sparse_lambda: 0.2
+    blur_kernel_size: 3
+    epochs: 10
