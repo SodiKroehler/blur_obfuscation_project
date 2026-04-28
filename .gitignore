@@ -231,7 +231,9 @@ Epic_1/EX_01/Raw/MNIST/
 Epic_1/EX_01/EX_01/Raw/MNIST
 # env
 .env
-
+/data/**
 
 **/*.pt
 **/*.pth
+
+
