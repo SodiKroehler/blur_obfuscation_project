@@ -1,7 +1,7 @@
-exp_id: EX_03_05
+exp_id: EX_03_06
 epic: 3
-description: "puttin in all 2gether"
-date: 2026-04-27
+description: "triple model"
+date: 2026-04-28
 owner: sodi
 seed: 42
 img_size: 28
@@ -13,31 +13,38 @@ epochs: 20
 # override any defaults.yaml values below this line
 variants:
   a:
-    description: "prep network bootstrap"
-    alpha: 0.2
-    beta: 0.60
-    gamma: 0.20
-    dropout_rate: 0.5
-    sparse_lambda: 0.2
-    blur_kernel_size: 3
-    epochs: 10
-    lr: 0.0003
-  b:
-    description: "the full bifurcated model"
-    alpha: 0.25
-    beta: 0.75
+    description: "an updated painter network, with galaxies"
+    alpha: -0.55
+    beta: 0.45
     dropout_rate: 0.5
     sparse_lambda: 0.2
     blur_kernel_size: 3
     epochs: 10
     lr: 0.0003
     blur_fn: "box"
-  c:
-    description: "hider"
-    alpha: -0.55
-    beta: -0.45
+    color_loss_w: 1.0
+    var_loss_w: 0.1
+    style_loss_w: 5
+    tv_loss_w: 0.1
+    div_loss_w: 0.05
+
+  b:
+    description: "the new double model"
+    alpha: 0.25
+    beta: 0.75
     dropout_rate: 0.5
     sparse_lambda: 0.2
     blur_kernel_size: 3
-    epochs: 10
-    lr: 0.0003
+    epochs: 25
+    lr: 0.0005
+    blur_fn: "box"
+  c:
+    description: "the new double model"
+    alpha: 0.25
+    beta: 0.75
+    dropout_rate: 0.5
+    sparse_lambda: 0.2
+    blur_kernel_size: 3
+    epochs: 25
+    lr: 0.0005
+    blur_fn: "gauss"
